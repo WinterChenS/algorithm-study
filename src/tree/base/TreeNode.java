@@ -3,7 +3,7 @@
  * @Author: winterchen
  * @Description: TODO
  * @Version: 1.0
- * @LastEditTime: 2021-06-25 14:20:24
+ * @LastEditTime: 2021-06-28 14:30:42
  */
 package tree.base;
 
@@ -14,5 +14,11 @@ public class TreeNode {
     public TreeNode left;
 
     public TreeNode right;
+
+    public TreeNode(){}
+
+    public TreeNode(int val) {
+        this.val = val;
+    }
 
 }
