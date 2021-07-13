@@ -5,7 +5,7 @@ package list;
  * @Author: winterchen
  * @Description: 数组排序
  * @Version: 1.0
- * @LastEditTime: 2021-06-28 15:03:01
+ * @LastEditTime: 2021-06-28 15:27:00
  */
 public class ArraySort {
     
@@ -33,8 +33,8 @@ public class ArraySort {
     }
 
     /**
-     * 选择排序
-     * 最稳定的排序：t[n] = O[n²]
+     * 选择排序(非常稳定)
+     * 最佳情况：T(n) = O(n2)  最差情况：T(n) = O(n2)  平均情况：T(n) = O(n2)
      * @param array
      * @return
      */
@@ -55,6 +55,30 @@ public class ArraySort {
         }
         return array;
     }
+
+    /**
+     * 插入排序
+     * 最佳情况：T(n) = O(n)   最坏情况：T(n) = O(n2)   平均情况：T(n) = O(n2)
+     * @param array
+     * @return
+     */
+    public static int[] insertionSort(int[] array) {
+        if (array == null || array.length == 0) {
+            return array;
+        }
+        int current;
+        for (int i = 0; i < array.length - 1; i++) {
+            current = array[i + 1];
+            int preIndex = i;
+            while(preIndex >= 0 && current < array[preIndex]) {
+                array[preIndex + 1] = array[preIndex];
+                preIndex --;
+            }
+            array[preIndex + 1] = current;
+        }
+        return array;
+    }
+    
 
     public static void print(int[] array) {
         if (array == null || array.length == 0) {

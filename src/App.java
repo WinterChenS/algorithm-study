@@ -43,7 +43,7 @@ public class App {
         // int[] sortArray = ArraySort.bubbleSort(array);
         // ArraySort.print(sortArray);
 
-        int[] sortArray = ArraySort.selectionSort(array);
+        int[] sortArray = ArraySort.insertionSort(array);
         ArraySort.print(sortArray);
         
 
